@@ -2,6 +2,7 @@ import {useState} from 'react';
 import uuid from "react-uuid";
 import './App.css';
 import Main from './Components/Main';
+import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 
 
@@ -47,7 +48,7 @@ function App() {
         activeNote={activeNote}
         setActiveNote={setActiveNote}
       />
-      <Main activeNote={getActiveNote()} onUpdateNote ={onUpdateNote}/>
+      <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
     </div>
   );
 }
