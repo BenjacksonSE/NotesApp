@@ -1,3 +1,4 @@
+import { CancelTwoTone, YoutubeSearchedFor } from "@mui/icons-material";
 import ReactMarkdown from "react-markdown";
 
 function Main({ activeNote, onUpdateNote }) {
@@ -13,7 +14,7 @@ function Main({ activeNote, onUpdateNote }) {
 
   return (
     <div className="app-main">
-      <div className="app-main-note-edit">
+      <div className="app-main-note-edit"> 
         <input
           type="text"
           id="title"

@@ -2,8 +2,9 @@ import {useState} from 'react';
 import uuid from "react-uuid";
 import './App.css';
 import Main from './Components/Main';
-import Navbar from './Components/Navbar';
+import AppNavbar from './Components/AppNavbar';
 import Sidebar from './Components/Sidebar';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function App() {
@@ -40,16 +41,19 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Sidebar
-        notes={notes}
-        onAddNote={onAddNote}
-        onDeleteNote={onDeleteNote}
-        activeNote={activeNote}
-        setActiveNote={setActiveNote}
-      />
-      <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
-    </div>
+    <>
+      <AppNavbar sticky="top" />
+      <div className="App">
+        <Sidebar
+          notes={notes}
+          onAddNote={onAddNote}
+          onDeleteNote={onDeleteNote}
+          activeNote={activeNote}
+          setActiveNote={setActiveNote}
+        />
+        <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
+      </div>
+    </>
   );
 }
 
